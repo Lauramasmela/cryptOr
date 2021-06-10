@@ -18,8 +18,7 @@
                             <form action="{{route('page.destroy', $monnaie->id)}}" method="POST">
                                 @csrf
                                 @method('delete')
-                                <button type="submit">Supprimer</button>
-
+                                <button type="submit" class="btn_delete">Supprimer</button>
                             </form>
                         </div>
                     </div>

@@ -50,6 +50,18 @@ html, body {
     -webkit-transition: 0.5s;
 }
 
+.btn_delete{
+    color: white;
+    padding: 10px;
+    background-color: red;
+    border-radius: 5px;
+    -webkit-transition: 0.5s;
+}
+.btn_delete:hover{
+    background-color: crimson;
+    -webkit-transition: 0.5s;
+}
+
 a.button_create:hover {
     background-color: #00ff22;
     -webkit-transition: 0.5s;
@@ -71,7 +83,7 @@ a.button_create:hover {
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%);
     padding: 20px 20px;
-    min-height: 200px;
+    min-height: 250px;
 }
 .card .monnaie_info div{
     padding-top: 4px;
