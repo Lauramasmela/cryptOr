@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', '\App\Http\Controllers\MonnaieController@index')->name('page.index');
 Route::get('/create', '\App\Http\Controllers\MonnaieController@create')->name('page.create');
 Route::post('/', '\App\Http\Controllers\MonnaieController@store')->name('page.store');
+Route::delete('/{id}', '\App\Http\Controllers\MonnaieController@destroy')->name('page.destroy');
 
 
 

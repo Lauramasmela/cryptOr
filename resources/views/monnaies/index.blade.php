@@ -13,6 +13,16 @@
                     <div><strong>Symbole : </strong> {{ $monnaie->symbole}}</div>
                     <div><strong>Description :</strong> {{ $monnaie->description}}</div>
                     <div><strong>Cours:</strong> {{ $monnaie->cours}}</div>
+                    <div>
+                        <div>
+                            <form action="{{route('page.destroy', $monnaie->id)}}" method="POST">
+                                @csrf
+                                @method('delete')
+                                <button type="submit">Supprimer</button>
+
+                            </form>
+                        </div>
+                    </div>
                 </div>
 
             </div>

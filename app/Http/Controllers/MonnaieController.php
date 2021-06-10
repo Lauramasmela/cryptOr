@@ -75,4 +75,16 @@ class MonnaieController extends Controller
         }
 
     }
+
+    public function destroy($id){
+        $monnaie = Monnaie::find($id);
+
+        $monnaie->delete();
+
+        return redirect()->route('page.index');
+
+    }
+
+
+
 }
