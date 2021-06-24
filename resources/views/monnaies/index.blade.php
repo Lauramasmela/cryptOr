@@ -13,7 +13,10 @@
                     <div><strong>Symbole : </strong> {{ $monnaie->symbole}}</div>
                     <div><strong>Description :</strong> {{ $monnaie->description}}</div>
                     <div><strong>Cours:</strong> {{ $monnaie->cours}}</div>
-                    <div>
+                    <div class="options">
+                        <div>
+                            <a class="btn_modif" href="/create/{{ $monnaie->id}}">Modifier</a>
+                        </div>
                         <div>
                             <form action="{{route('page.destroy', $monnaie->id)}}" method="POST">
                                 @csrf

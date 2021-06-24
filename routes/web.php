@@ -19,6 +19,8 @@ Route::get('/', '\App\Http\Controllers\MonnaieController@index')->name('page.ind
 Route::get('/create', '\App\Http\Controllers\MonnaieController@create')->name('page.create');
 Route::post('/', '\App\Http\Controllers\MonnaieController@store')->name('page.store');
 Route::delete('/{id}', '\App\Http\Controllers\MonnaieController@destroy')->name('page.destroy');
+Route::get('/create/{id}', '\App\Http\Controllers\MonnaieController@edit')->name('page.edit');
+Route::put('/create/{id}', '\App\Http\Controllers\MonnaieController@update')->name('page.update');
 
 
 

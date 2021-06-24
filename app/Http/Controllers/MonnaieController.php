@@ -85,6 +85,22 @@ class MonnaieController extends Controller
 
     }
 
+    public function edit($id){
+        $monnaie = Monnaie::find($id);
+        return view('monnaies.edit')->with('monnaie', $monnaie);
+    }
+
+    public function update(Request $request, $id){
+        $monnaie = Monnaie::find($id);
+        $monnaie->nom = ucwords($request->input('nom_monnaie'));
+        $monnaie->symbole = strtoupper($request->input('symbole_monnaie'));
+        $monnaie->description = ucfirst($request->input('description_monnaie'));
+        $monnaie->cours = $request->input('cours_monnaie');
+
+        $monnaie->save();
+
+        return redirect()->route('page.index');
+    }
 
 
 }
